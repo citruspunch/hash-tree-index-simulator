@@ -46,7 +46,7 @@ class Bucket:
         new_bucket = Bucket(self.local_depth + 1)
         self.local_depth += 1
         
-        # Redistribuir claves basado en el nuevo bit de profundidad
+        # Redistribuye SUS PROPIAS claves usando el bit adicional
         remaining_keys = []
         for key in self.keys:
             # Usar el bit adicional para decidir qué bucket debe contener la clave
