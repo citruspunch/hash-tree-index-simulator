@@ -72,6 +72,7 @@ class Directory:
         
         # Intentar insertar la clave nuevamente
         bucket, _ = self._get_bucket(key)
+        print(bucket)
         if bucket.insert(key):
             return True, f"Clave {key} insertada después de división de bucket"
         else:
