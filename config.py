@@ -1,5 +1,5 @@
 """
-Configuraciones para el índice hash extensible
+Configuraciones iniciales para el índice hash extensible
 """
 
 # Configuracion de buckets
