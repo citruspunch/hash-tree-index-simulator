@@ -8,7 +8,7 @@ from cli import ExtensibleHashCLI
 
 
 def main():
-    """Función principal que inicia la aplicación"""
+    # Función principal que inicia la aplicación
     cli = ExtensibleHashCLI()
     cli.run()
 
