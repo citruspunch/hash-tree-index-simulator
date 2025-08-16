@@ -11,14 +11,14 @@ class ExtensibleHashCLI:
         self.directory = Directory()
     
     def show_welcome(self):
-        """Muestra el mensaje de bienvenida"""
+        # Muestra el mensaje de bienvenida
         print(MESSAGES['WELCOME'])
         print(MESSAGES['HASH_FUNCTION'])
         print(MESSAGES['KEY_RANGE'])
         print(MESSAGES['BUCKET_CAPACITY'])
     
     def show_menu(self):
-        """Muestra el menú principal"""
+        # Muestra el menú principal
         print(f"\n--- Menú Principal ---")
         print("1. Insertar clave (1-100)")
         print("2. Eliminar clave")
@@ -27,7 +27,7 @@ class ExtensibleHashCLI:
         print("5. Salir")
     
     def handle_insert(self):
-        """Maneja la opción de insertar clave"""
+        # Maneja la opción de insertar clave
         try:
             key = int(input(f"Ingrese la clave a insertar ({MIN_KEY_VALUE}-{MAX_KEY_VALUE}): "))
             success, message = self.directory.insert(key)
@@ -38,7 +38,7 @@ class ExtensibleHashCLI:
             print(MESSAGES['INVALID_NUMBER'])
     
     def handle_delete(self):
-        """Maneja la opción de eliminar clave"""
+        # Maneja la opción de eliminar clave
         try:
             key = int(input("Ingrese la clave a eliminar: "))
             success, message = self.directory.delete(key)
@@ -49,7 +49,7 @@ class ExtensibleHashCLI:
             print(MESSAGES['INVALID_NUMBER'])
     
     def handle_search(self):
-        """Maneja la opción de buscar clave"""
+        # Maneja la opción de buscar clave
         try:
             key = int(input("Ingrese la clave a buscar: "))
             found = self.directory.search(key)
@@ -58,11 +58,11 @@ class ExtensibleHashCLI:
             print(MESSAGES['INVALID_NUMBER'])
     
     def handle_print_status(self):
-        """Maneja la opción de imprimir configuración"""
+        # Maneja la opción de imprimir configuración
         self.directory.print_status()
     
     def run(self):
-        """Ejecuta el bucle principal de la CLI"""
+        # Ejecuta el bucle principal de la CLI
         self.show_welcome()
         
         while True:
