@@ -8,7 +8,6 @@ from config import BUCKET_MAX_SIZE, INITIAL_LOCAL_DEPTH
 
 
 class Bucket:
-    """Representa un bucket/página con capacidad máxima y profundidad local"""
     
     def __init__(self, local_depth=INITIAL_LOCAL_DEPTH):
         self.local_depth = local_depth
@@ -16,15 +15,15 @@ class Bucket:
         self.max_size = BUCKET_MAX_SIZE  # Capacidad máxima del bucket
     
     def is_full(self):
-        """Verifica si el bucket está lleno"""
+        # Verifica si el bucket está lleno
         return len(self.keys) >= self.max_size
     
     def is_empty(self):
-        """Verifica si el bucket está vacío"""
+        # Verifica si el bucket está vacío
         return len(self.keys) == 0
     
     def insert(self, key):
-        """Inserta una clave si hay espacio y no existe"""
+        # Inserta una clave si hay espacio y no existe
         if key not in self.keys and not self.is_full():
             self.keys.append(key)
             self.keys.sort()  # Mantener ordenado para mejor visualización
@@ -32,18 +31,18 @@ class Bucket:
         return False
     
     def delete(self, key):
-        """Elimina una clave si existe"""
+        # Elimina una clave si existe
         if key in self.keys:
             self.keys.remove(key)
             return True
         return False
     
     def contains(self, key):
-        """Verifica si la clave existe en el bucket"""
+        # Verifica si la clave existe en el bucket
         return key in self.keys
     
     def split(self):
-        """Divide el bucket creando uno nuevo con mayor profundidad local"""
+        # Divide el bucket creando uno nuevo con mayor profundidad local
         new_bucket = Bucket(self.local_depth + 1)
         self.local_depth += 1
         
