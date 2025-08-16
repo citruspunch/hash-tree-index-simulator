@@ -11,14 +11,12 @@ class ExtensibleHashCLI:
         self.directory = Directory()
     
     def show_welcome(self):
-        # Muestra el mensaje de bienvenida
         print(MESSAGES['WELCOME'])
         print(MESSAGES['HASH_FUNCTION'])
         print(MESSAGES['KEY_RANGE'])
         print(MESSAGES['BUCKET_CAPACITY'])
     
     def show_menu(self):
-        # Muestra el menú principal
         print(f"\n--- Menú Principal ---")
         print("1. Insertar clave (1-100)")
         print("2. Eliminar clave")
