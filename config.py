@@ -25,11 +25,11 @@ MENU_OPTIONS = {
 
 # Mensajes de la interfaz
 MESSAGES = {
-    'WELCOME': "🔍 Simulador de Índice Hash Extensible",
+    'WELCOME': "Simulador de Índice Hash Extensible",
     'HASH_FUNCTION': "Hash function: h(k) = k",
     'KEY_RANGE': f"Rango de claves: {MIN_KEY_VALUE}-{MAX_KEY_VALUE}",
     'BUCKET_CAPACITY': f"Capacidad de bucket: {BUCKET_MAX_SIZE} claves",
-    'GOODBYE': "¡Hasta luego!",
+    'GOODBYE': "Fin del simulador.",
     'INVALID_OPTION': "✗ Opción no válida. Seleccione 1-5.",
     'INVALID_NUMBER': "✗ Error: Ingrese un número válido."
 }
